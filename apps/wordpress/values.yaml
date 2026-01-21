@@ -1,0 +1,8 @@
+wordpressUsername: admin
+wordpressEmail: admin@example.com
+
+service:
+  type: NodePort
+
+mariadb:
+  enabled: true

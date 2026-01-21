@@ -1,0 +1,3 @@
+resources:
+  - helmrelease.yaml
+  - mysql-secret.sops.yaml
