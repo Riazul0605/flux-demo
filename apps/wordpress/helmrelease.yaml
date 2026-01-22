@@ -13,7 +13,6 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
-      version: "24.x.x"
   valuesFrom:
     - kind: Secret
       name: mysql-secret
