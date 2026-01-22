@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: wordpress
-      version: "24.0.3"
+      version: "wordpress:latest"
       sourceRef:
         kind: HelmRepository
         name: bitnami
@@ -17,7 +17,7 @@ spec:
   values:
     mariadb:
       image:
-        tag: "11.4.3-debian-12-r0"  # pick a valid tag
+        tag: "latest-metadata"  # pick a valid tag
   valuesFrom:
     - kind: Secret
       name: mysql-secret
