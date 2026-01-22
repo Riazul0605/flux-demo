@@ -17,7 +17,7 @@ spec:
   values:
     mariadb:
       image:
-        tag: "latest-metadata"  # pick a valid tag
+        tag: "11.4.3-debian-12-r0"  # pick a valid tag
   valuesFrom:
     - kind: Secret
       name: mysql-secret
