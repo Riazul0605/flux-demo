@@ -15,7 +15,6 @@ spec:
         name: bitnami
         namespace: flux-system
   values:
-    wordpress:
       image:
         tag: "6.4.3-debian-12-r5"   # valid image tag
     mariadb:
