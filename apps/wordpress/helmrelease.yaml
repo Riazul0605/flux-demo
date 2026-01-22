@@ -17,7 +17,10 @@ spec:
   values:
     mariadb:
       image:
-        tag: "11.4.3-debian-12-r0"  # pick a valid tag
+        tag: "11.4.3-debian-12-r0"
+    wordpress:
+      image:
+        tag: "6.6.0-debian-12-r0"   # <-- valid tag
   valuesFrom:
     - kind: Secret
       name: mysql-secret
