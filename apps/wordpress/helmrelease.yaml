@@ -9,6 +9,7 @@ spec:
   chart:
     spec:
       chart: wordpress
+      version: "24.0.3"
       sourceRef:
         kind: HelmRepository
         name: bitnami
@@ -16,10 +17,10 @@ spec:
   values:
     mariadb:
       image:
-        tag: "sha256-b705ca244257c7fb128a9f6e9cc66374b536f1370bc9e54c2d678d54df3846e3"
+        tag: "latest"
     wordpress:
       image:
-        tag: "sha256-b697155ef45b6ceb80e2bfdcc758e4ccf846dd4a523caefcc87934139ce6fc88"   # <-- valid tag
+        tag: "latest"   # <-- valid tag
   valuesFrom:
     - kind: Secret
       name: mysql-secret
