@@ -17,7 +17,7 @@ spec:
   values:
     mariadb:
       image:
-        tag: "latest"
+        tag: "6.6.0-debian-12-r0"
     wordpress:
       image:
         tag: "latest"   # <-- valid tag
