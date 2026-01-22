@@ -14,6 +14,10 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
+  values:
+    mariadb:
+      image:
+        tag: "11.4.3-debian-12-r0"  # pick a valid tag
   valuesFrom:
     - kind: Secret
       name: mysql-secret
