@@ -4,15 +4,17 @@ metadata:
   name: wordpress
   namespace: default
 spec:
-  interval: 10m
+  interval: 5m
+  releaseName: wordpress
   chart:
     spec:
       chart: wordpress
-      version: 24.2.11
       sourceRef:
-        kind: OCIRepository
+        kind: HelmRepository
         name: bitnami
         namespace: flux-system
-  values:
-    mariadb:
-      enabled: false
+      version: "24.x.x"
+  valuesFrom:
+    - kind: Secret
+      name: mysql-secret
+      valuesKey: values.yaml
