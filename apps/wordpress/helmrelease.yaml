@@ -15,14 +15,6 @@ spec:
         name: bitnami
         namespace: flux-system
 
-  values:
-    mariadb:
-      primary:
-        image:
-          registry: docker.io
-          repository: bitnami/mariadb
-          tag: latest   # 👈 FIXED TAG
-
   valuesFrom:
     - kind: Secret
       name: mysql-secret
