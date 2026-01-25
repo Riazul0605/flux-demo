@@ -17,11 +17,11 @@ spec:
 
   values:
     mariadb:
-     primary:
-      image:
-        registry: docker.io
-        repository: bitnami/mariadb
-        tag: 11.4.3-debian-12-r0   # 👈 FIXED TAG
+      primary:
+        image:
+          registry: docker.io
+          repository: bitnami/mariadb
+          tag: 11.4.3-debian-12-r0   # 👈 FIXED TAG
 
   valuesFrom:
     - kind: Secret
