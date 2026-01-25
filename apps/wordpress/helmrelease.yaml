@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: wordpress
-      version: "23.1.26"
+      version: "latest"
       sourceRef:
         kind: HelmRepository
         name: bitnami
