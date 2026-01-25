@@ -17,6 +17,7 @@ spec:
 
   values:
     mariadb:
+     primary:
       image:
         registry: docker.io
         repository: bitnami/mariadb
