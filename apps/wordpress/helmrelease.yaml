@@ -9,11 +9,14 @@ spec:
   chart:
     spec:
       chart: wordpress
-#      version: "23.1.26"
       sourceRef:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
+
+  values:
+    image:
+      tag: 6.7.1-debian-12-r0
 
   valuesFrom:
     - kind: Secret
