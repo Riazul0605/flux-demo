@@ -9,14 +9,15 @@ spec:
   chart:
     spec:
       chart: wordpress
+      version: "latest"
       sourceRef:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
 
-  values:
-      image:
-        tag: "latest"
+  #values:
+      #image:
+        #tag: "latest"
   valuesFrom:
     - kind: Secret
       name: mysql-secret
