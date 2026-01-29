@@ -16,7 +16,7 @@ spec:
 
   values:
     image:
-      tag: 6.7.1-debian-12-r0
+      tag: latest
 
   valuesFrom:
     - kind: Secret
