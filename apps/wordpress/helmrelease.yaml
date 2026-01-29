@@ -9,18 +9,14 @@ spec:
   chart:
     spec:
       chart: wordpress
-      version: "latest"
       sourceRef:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
 
   values:
-    mariadb:
       image:
-        registry: docker.io
-        repository: bitnami/mariadb
-        tag: 11.4.10-debian-12-r0
+        tag: "latest"
   valuesFrom:
     - kind: Secret
       name: mysql-secret
