@@ -5,19 +5,50 @@ metadata:
   namespace: default
 spec:
   interval: 5m
-  timeout: 15m
+  timeout: 20m
   releaseName: wordpress
 
   chart:
     spec:
       chart: wordpress
-      version: "latest"
+      version: "23.1.26"
       sourceRef:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
 
   values:
+    service:
+      type: ClusterIP
+
+    # --------------------
+    # WordPress persistence
+    # --------------------
+    persistence:
+      enabled: true
+      size: 1Gi
+      accessModes:
+        - ReadWriteOnce
+      storageClass: standard   # minikube default
+
+    # --------------------
+    # MariaDB persistence
+    # --------------------
+    mariadb:
+      image:
+        registry: docker.io
+        repository: bitnami/mariadb
+        tag: 11.3.2-debian-11-r0
+
+      primary:
+        persistence:
+          enabled: true
+          size: 1Gi
+          storageClass: standard
+
+      auth:
+        existingSecret: mysql-secret
+
   valuesFrom:
     - kind: Secret
       name: mysql-secret
